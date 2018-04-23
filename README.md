@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/brainbeanapps/redux-trivial-actions.svg)](https://travis-ci.org/brainbeanapps/redux-trivial-actions)
 [![Coverage Status](https://img.shields.io/coveralls/github/brainbeanapps/redux-trivial-actions.svg)](https://coveralls.io/github/brainbeanapps/redux-trivial-actions?branch=master)
-[![npm version](https://badge.fury.io/js/%40brainbeanapps%2Fredux-trivial-actions.svg)](https://badge.fury.io/js/%40brainbeanapps%2Fredux-trivial-actions)
+[![npm version](https://badge.fury.io/js/redux-trivial-actions.svg)](https://badge.fury.io/js/redux-trivial-actions)
 [![Dependency Status](https://img.shields.io/librariesio/github/brainbeanapps/redux-trivial-actions.svg)](https://libraries.io/github/brainbeanapps/redux-trivial-actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ae525ee428e821bef95a/maintainability)](https://codeclimate.com/github/brainbeanapps/redux-trivial-actions/maintainability)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)

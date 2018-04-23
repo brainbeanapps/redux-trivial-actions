@@ -1,0 +1,62 @@
+{
+  "name": "redux-trivial-actions",
+  "version": "0.0.0",
+  "description": "Objectified Flux Standard Action for Redux",
+  "keywords": [
+    "flux",
+    "redux",
+    "fsa",
+    "actions"
+  ],
+  "author": {
+    "name": "Brainbean Apps",
+    "email": "hello@brainbeanapps.com",
+    "url": "https://brainbeanapps.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/brainbeanapps/redux-trivial-actions/issues"
+  },
+  "homepage": "https://github.com/brainbeanapps/redux-trivial-actions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brainbeanapps/redux-trivial-actions.git"
+  },
+  "license": "MIT",
+  "main": "lib/commonjs/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "lint": "standard",
+    "test": "cross-env NODE_ENV=test nyc --reporter=none mocha",
+    "coverage": "cross-env NODE_ENV=test nyc report --reporter=html --reporter=text",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "compile:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib/commonjs",
+    "compile": "npm run compile:commonjs",
+    "build": "npm run lint && npm run test && npm run compile",
+    "preversion": "npm run lint && npm run test",
+    "version": "npm run compile",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "@types/redux-actions": "^2.2.4",
+    "redux-actions": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.6",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.4",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "standard": "^11.0.1"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}

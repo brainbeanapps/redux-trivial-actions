@@ -10,8 +10,9 @@ chai
 describe('createTrivialAction()', () => {
   it('should return an expected object', () => {
     const action = createTrivialAction('TEST')
+    action.should.be.a('function')
     action.PERFORM.should.be.a.string('TEST/PERFORM')
-    action.should.respondTo('perform')
+    action.should.have.property('perform').that.is.a('function')
     action.toString().should.be.a.string('TEST/PERFORM')
   })
 })

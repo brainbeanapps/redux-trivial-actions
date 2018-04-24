@@ -3,11 +3,8 @@ import { createAction } from 'redux-actions'
 export default function createTrivialAction (type, ...params) {
   const actionCreator = createAction(`${type}/PERFORM`, ...params)
 
-  return {
+  return Object.assign(actionCreator, {
     PERFORM: actionCreator.toString(),
-    perform: actionCreator,
-    toString: () => {
-      return actionCreator.toString()
-    }
-  }
+    perform: actionCreator
+  })
 }

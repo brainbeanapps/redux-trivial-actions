@@ -62,5 +62,7 @@ import { demoAction } from './actions'
 
 // ...
 dispatch(demoAction.perform())
+// or
+dispatch(demoAction())
 // ...
 ```

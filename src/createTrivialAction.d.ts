@@ -1,15 +1,15 @@
 import { Action, ActionMeta, ActionFunction0, ActionFunction1, ActionFunction2, ActionFunction3, ActionFunction4, ActionFunctionAny } from 'redux-actions'
 
-export interface ITrivialAction<TActionFunction> {
+export interface ITrivialAction<TActionCreator> {
   readonly PERFORM: string,
-  perform: TActionFunction
+  perform: TActionCreator
 }
 
-export type TrivialAction<TActionFunction> = ITrivialAction<TActionFunction> & TActionFunction
+export type TrivialAction<TActionCreator> = ITrivialAction<TActionCreator> & TActionCreator
 
 export function createTrivialAction(
   actionType: string
-): TrivialAction<ActionFunction0<Action<void>>>
+): TrivialAction<ActionFunctionAny<Action<any>>>
 
 export function createTrivialAction<Payload>(
   actionType: string,
@@ -39,6 +39,12 @@ export function createTrivialAction<Payload, Arg1, Arg2, Arg3, Arg4>(
 export function createTrivialAction<Payload>(
   actionType: string
 ): TrivialAction<ActionFunction1<Payload, Action<Payload>>>
+
+export function createTrivialAction<Meta>(
+  actionType: string,
+  payloadCreator: null | undefined,
+  metaCreator: ActionFunctionAny<Meta>
+): TrivialAction<ActionFunctionAny<ActionMeta<any, Meta>>>
 
 export function createTrivialAction<Payload, Meta>(
   actionType: string,

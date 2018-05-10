@@ -1,4 +1,4 @@
-# redux-trivial-actions utility by [Brainbean Apps](https://brainbeanapps.com)
+# redux-trivial-actions utility library by [Brainbean Apps](https://brainbeanapps.com)
 
 [![Build Status](https://img.shields.io/travis/brainbeanapps/redux-trivial-actions.svg)](https://travis-ci.org/brainbeanapps/redux-trivial-actions)
 [![Coverage Status](https://img.shields.io/coveralls/github/brainbeanapps/redux-trivial-actions.svg)](https://coveralls.io/github/brainbeanapps/redux-trivial-actions?branch=master)
@@ -17,13 +17,13 @@ Objectified [Flux Standard Action](https://github.com/acdlite/flux-standard-acti
 ## Installation
 
 ```bash
-$ npm install --save redux-actions
+$ npm install --save redux-trivial-actions
 ```
 
 or
 
 ```bash
-$ yarn add redux-actions
+$ yarn add redux-trivial-actions
 ```
 
 ## Usage
